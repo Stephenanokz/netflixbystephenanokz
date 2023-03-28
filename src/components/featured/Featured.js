@@ -57,7 +57,7 @@ const Featured = ({ type, setGenre }) => {
         <img src={content.imgTitle} alt="" />
         <span className="desc">{content.desc}</span>
         <div className="buttons">
-          <Link to="/watch" state={{ movie: content }}>
+          <Link className="link" to="/watch" state={{ movie: content }}>
           <button className="play">
             <PlayArrow />
             <span>Play</span>

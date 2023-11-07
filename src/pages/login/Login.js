@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { loginCall } from "../../authContext/apiCalls";
 import { AuthContext } from "../../authContext/AuthContext";
 import "./login.scss";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,11 +18,16 @@ const Login = () => {
     <div className="login">
       <div className="top">
         <div className="wrapper">
-          <img
-            className="logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-            alt=""
-          />
+          <Link className="link" to="/">
+            <img
+              className="logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+              alt=""
+            />
+          </Link>
+          <Link className="link" to="/register">
+            <button className="loginButton">Create Account</button>
+          </Link>
         </div>
       </div>
       <div className="container">
@@ -41,7 +47,10 @@ const Login = () => {
             Sign In
           </button>
           <span>
-            New to Netflix? <b>Sign up now.</b>
+            New to Netflix?{" "}
+            <Link to="/register">
+              <b>Sign up now.</b>
+            </Link>
           </span>
           <small>
             This page is protected by Google reCAPTCHA to ensure you're not a

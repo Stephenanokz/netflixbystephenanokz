@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./featured.scss";
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 import axios from "axios";
@@ -57,12 +57,12 @@ const Featured = ({ type, setGenre }) => {
         <img src={content.imgTitle} alt="" />
         <span className="desc">{content.desc}</span>
         <div className="buttons">
-          <Link to="/watch" state={{ movie: content }}>
+          <Link className="link" to="/watch" state={{ movie: content }}>
           <button className="play">
             <PlayArrow />
             <span>Play</span>
           </button>
-          </Link> 
+          </Link>
           <button className="more">
             <InfoOutlined />
             <span>Info</span>
